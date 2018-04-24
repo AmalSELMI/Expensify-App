@@ -1,3 +1,7 @@
+
+// Reducers are pure functions and never directly change state or action >>MUTATE ON A NEW OBJECT
+
+
 import { createStore } from 'redux';
 
 // Action generators - functions that return action objects
@@ -21,11 +25,11 @@ const resetCount = () => ({
   type: 'RESET'
 });
 
+// Reducers
+// 1. Reducers are pure functions
+// 2. Never change state or actiton
 
-//Reducers
-// Reducers are pure functions and never directly change state or action >>MUTATE ON A NEW OBJECT
-
-const store = createStore((state = { count: 0 }, action) => {
+const countReducer = (state = { count: 0 }, action) => {
   switch (action.type) {
     case 'INCREMENT':
       return {
@@ -46,12 +50,10 @@ const store = createStore((state = { count: 0 }, action) => {
     default:
       return state;
   }
-});
-
+};
 
 const store = createStore(countReducer);
 
- 
 const unsubscribe = store.subscribe(() => {
   console.log(store.getState());
 });
