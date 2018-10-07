@@ -3,6 +3,7 @@ const path = require('path');
 const express = require('express');
 const app = express();
 const publicPath = path.join(__dirname, '..', 'public');
+const port = process.env.PORT || 3000;
 
 app.use(express.static(publicPath));
 // 2.use public directory to serve static assets
@@ -11,7 +12,7 @@ app.get('*', (req, res) => {
 });
 // 3. if request not in folder give back index.html
 
-app.listen(3000, () => {
+app.listen(port, () => {
   console.log('Server is up!');
 });
 // 4. start on port 3000
