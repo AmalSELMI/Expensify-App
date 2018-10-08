@@ -9,11 +9,13 @@ ShallowWrapper {
   },
   "length": 1,
   "node": <div>
+    <Connect(ExpensesSummary) />
     <Connect(ExpenseListFilters) />
     <Connect(ExpenseList) />
 </div>,
   "nodes": Array [
     <div>
+      <Connect(ExpensesSummary) />
       <Connect(ExpenseListFilters) />
       <Connect(ExpenseList) />
 </div>,
@@ -53,11 +55,13 @@ ShallowWrapper {
       "_pendingStateQueue": null,
       "_renderedComponent": NoopInternalComponent {
         "_currentElement": <div>
+          <Connect(ExpensesSummary) />
           <Connect(ExpenseListFilters) />
           <Connect(ExpenseList) />
 </div>,
         "_debugID": 2,
         "_renderedOutput": <div>
+          <Connect(ExpensesSummary) />
           <Connect(ExpenseListFilters) />
           <Connect(ExpenseList) />
 </div>,
